@@ -17,14 +17,16 @@
             height: 80vmin;
             width: 80vmin;
             position: relative;
-            background-color: #0000ff;
+            background-color: #000000;
+            border-radius: 2vmin;
         }
         #child{
             display: inline-block;
             height: 10vmin;
             width: 10vmin;
             position: absolute;
-            background-color: #ff0000;
+            background-color: #ffff00;
+            border-radius: 2vmin;
         }
     </style>
     <script>
@@ -39,7 +41,7 @@
         function nothing(){}
         function caught(){
         var box = document.getElementById('child'); 
-        document.write("<h1 style=\"text-align: center; font-family: 'Courier New', Courier, monospace;\">YOU CAUGHT ME!</h1>")
+        document.write("<h1 style=\"text-align: center; font-family: 'Courier New', Courier, monospace;\">YOU CAUGHT ME!<br>REFRESH TO PLAY AGAIN</h1>")
         }
     </script>
 </head>
