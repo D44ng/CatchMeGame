@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Me!</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-variant: small-caps;
+        }
+        #container{
+            text-align: left;
+            display: inline-block;
+            text-align: left;
+            height: 80vmin;
+            width: 80vmin;
+            position: relative;
+            background-color: #0000ff;
+        }
+        #child{
+            display: inline-block;
+            height: 10vmin;
+            width: 10vmin;
+            position: absolute;
+            background-color: #ff0000;
+        }
+    </style>
+    <script>
+        function move(){   
+        var box = document.getElementById('child');
+        var x = Math.floor(Math.random() * 8);
+        var y = Math.floor(Math.random() * 8);
+        var arr = [0,10,20,30,40,50,60,70];
+        box.style.left = arr[x]+'vmin';
+        box.style.top = arr[y]+'vmin';
+        }
+        function nothing(){}
+        function caught(){
+        var box = document.getElementById('child'); 
+        document.write("<h1 style=\"text-align: center; font-family: 'Courier New', Courier, monospace;\">YOU CAUGHT ME!</h1>")
+        }
+    </script>
+</head>
+<body>
+    <h1>CATCH ME IF YOU CAN</h1>
+    <div id="container">
+    <div onmouseover="move()" onmouseout="nothing()" onclick="caught()" id="child"></div>
+    </div>
+</body>
+</html>
